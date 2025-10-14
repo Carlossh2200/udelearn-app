@@ -25,27 +25,27 @@ export default function HeroPage() {
     }, [])
 
     const toggleMode = () => {
-        // Paso 1: Logo vuelve al centro y oculta formulario
-        setIsActive(false)
+        setIsActive(false)  // Logo comienza a bajar
         setShowForm(false)
 
-        // Paso 2: Después de 1.5s (cuando logo ya está en centro), flash
         setTimeout(() => {
-            setShowFlash(true)
-            
-            // Paso 3: Flash rápido y cambio de modo
+            setShowFlash(true)  // Fade comienza - pantalla comienza a oscurecer
+        
+        // Esperar a que el fade esté al máximo (20% de 1.5s = 0.3s)
             setTimeout(() => {
-                setMode(prev => prev === 'day' ? 'night' : 'day')
-                setShowFlash(false)
-                
-                // Paso 4: Después de 2s, logo sube y muestra formulario
+                setMode(prev => prev === 'day' ? 'night' : 'day')  // Cambio de fondo CUANDO YA ESTÁ OSCURO
+            }, 300)  // ← 0.3s después de que comenzó el fade
+        
+            setTimeout(() => {
+                setShowFlash(false)  // Fade termina - pantalla se aclara
+            
                 setTimeout(() => {
-                    setIsActive(true)
-                    setTimeout(() => setShowForm(true), 1500)
-                }, 2000)
-                
-            }, 200) // Flash rápido
-        }, 1500) // Tiempo que tarda el logo en volver al centro
+                    setIsActive(true)  // Logo comienza a subir
+                    setTimeout(() => setShowForm(true), 1500)  // Formulario aparece
+                }, 2000)  // 2s en centro antes de subir
+            
+            }, 400)  // Duración total del fade: 1.5 segundos
+        }, 1500)  // Animación de bajada del logo
     }
 
     const handleInputChange = (e) => {
@@ -126,10 +126,10 @@ export default function HeroPage() {
                         zIndex: 6,
                         filter: mode === 'day' 
                             ? 'invert(54%) sepia(87%) saturate(415%) hue-rotate(343deg) brightness(93%) contrast(91%)'
-                            : 'brightness(0) invert(1)'
+                            : 'invert(48%) sepia(79%) saturate(1382%) hue-rotate(345deg) brightness(93%) contrast(89%)'
                     }}
                 >
-                    {mode === 'day' ? '🌙' : '☀️'}
+                    {mode === 'day' ? '🌙' : '🔆'}
                 </div>
             )}
 
@@ -155,15 +155,15 @@ export default function HeroPage() {
             {/* Flash */}
             {showFlash && (
                 <div style={{
-                    position: 'absolute',
-                    top: 0, left: 0,
-                    width: '100%', height: '100%',
-                    background: 'white',
-                    zIndex: 10,
-                    opacity: 0,
-                    animation: 'flash 0.2s ease-out'
-                }} />
-            )}
+                position: 'absolute',
+                top: 0, left: 0,
+                width: '100%', height: '100%',
+                background: 'black',
+                zIndex: 10,
+                opacity: 0,
+                animation: 'fadeTransition 0.4s ease-in-out'  
+            }} />
+)}
         </div>
     )
 }

@@ -24,8 +24,8 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                         onChange={onInputChange}
                         style={{
                             width: '100%', padding: '15px',
-                            border: `2px solid #FFD700`, borderRadius: '10px',
-                            background: 'transparent', color: '#FFD700',
+                            border: `2px solid #B5B8B7`, borderRadius: '10px',
+                            background: 'transparent', color: '#B5B8B7',
                             backdropFilter: 'blur(5px)',
                             fontSize: '16px', outline: 'none'
                         }}
@@ -75,8 +75,8 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                             onChange={onInputChange}
                             style={{
                                 width: '100%', padding: '15px 15px 15px 45px',
-                                border: `2px solid #FFD700`, borderRadius: '10px',
-                                background: 'transparent', color: '#FFD700',
+                                border: `2px solid #B5B8B7`, borderRadius: '10px',
+                                background: 'transparent', color: '#B5B8B7',
                                 backdropFilter: 'blur(5px)',
                                 fontSize: '16px', outline: 'none',
                                 cursor: 'pointer'
@@ -87,7 +87,7 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                             position: 'absolute',
                             left: '15px', top: '50%',
                             transform: 'translateY(-50%)',
-                            fontSize: '20px', color: '#FFD700',
+                            fontSize: '20px', color: '#B5B8B7',
                             pointerEvents: 'none'
                         }}>
                             📎

@@ -12,8 +12,9 @@ code {
     monospace;
 }
 
-@keyframes flash {
+@keyframes fadeTransition {
     0% { opacity: 0; }
-    50% { opacity: 0.4; }
-    100% { opacity: 0; }
+    20% { opacity: 0.9; }    
+    80% { opacity: 1.0; }    
+    100% { opacity: 0; }     
 }
