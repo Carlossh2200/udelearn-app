@@ -31,12 +31,16 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                         }}
                         placeholder="Nombre"
                         required
+                        autoComplete="off"
+                        autoCorrect="off"
+                        autoCapitalize="off"
+                        spellCheck="false"
                     />
 
                     {/* Campo Correo */}
                     <input
-                        type="email"
-                        name="correo"
+                        type="text"
+                        name="nightmode-email"
                         value={formData.correo}
                         onChange={onInputChange}
                         style={{
@@ -47,6 +51,10 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                             fontSize: '16px', outline: 'none'
                         }}
                         placeholder="Correo electrónico"
+                        autoComplete="new-email"
+                        autoCorrect="off"
+                        autoCapitalize="none"
+                        spellCheck="false"
                         required
                     />
 
@@ -65,6 +73,10 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                         }}
                         placeholder="Carrera"
                         required
+                        autoComplete="off"
+                        autoCorrect="off"
+                        autoCapitalize="off"
+                        spellCheck="false"
                     />
 
                     {/* Campo Archivo con clip */}
