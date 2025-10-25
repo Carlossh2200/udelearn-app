@@ -37,24 +37,24 @@ export default function DayModeForm({ formData, onInputChange, isFormValid, onSu
                         spellCheck="false"
                     />
 
-                    {/* Campo Correo */}
                     <input
                         type="text"
-                        name="daymode-email"
+                        name="correo"
                         value={formData.correo}
                         onChange={onInputChange}
                         style={{
-                            width: '100%', padding: '15px',
-                            border: `2px solid #E97132`, borderRadius: '10px',
-                            background: 'transparent', color: '#E97132',
+                            width: '100%', 
+                            padding: '15px',
+                            border: `2px solid #E97132`, 
+                            borderRadius: '10px',
+                            background: 'transparent', 
+                            color: '#E97132',
                             backdropFilter: 'blur(5px)',
-                            fontSize: '16px', outline: 'none'
+                            fontSize: '16px', 
+                            outline: 'none'
                         }}
                         placeholder="Correo electrónico"
-                        autoComplete="new-email"
-                        autoCorrect="off"
-                        autoCapitalize="none"
-                        spellCheck="false"
+                        autoComplete="off"
                         required
                     />
 

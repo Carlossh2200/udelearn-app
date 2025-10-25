@@ -143,7 +143,7 @@ export default function Login({ onNavigate }) {
                                     ...inputStyle,
                                     borderColor: emailError ? 'red' : '#275054'
                                 }}
-                                autoComplete="new-email"
+                                autoComplete="off"
                                 autoCorrect="off"
                                 autoCapitalize="none"
                                 spellCheck="false"

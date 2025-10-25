@@ -16,7 +16,6 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                 transition: 'opacity 0.8s ease-in-out'
             }}>
                 <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                    {/* Campo Nombre - Nuevos colores para modo noche */}
                     <input
                         type="text"
                         name="nombre"
@@ -40,21 +39,22 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                     {/* Campo Correo */}
                     <input
                         type="text"
-                        name="nightmode-email"
+                        name="correo"
                         value={formData.correo}
                         onChange={onInputChange}
                         style={{
-                            width: '100%', padding: '15px',
-                            border: `2px solid #FF6B35`, borderRadius: '10px',
-                            background: 'transparent', color: '#FF6B35',
+                            width: '100%', 
+                            padding: '15px',
+                            border: `2px solid #B5B8B7`, 
+                            borderRadius: '10px',
+                            background: 'transparent', 
+                            color: '#B5B8B7',
                             backdropFilter: 'blur(5px)',
-                            fontSize: '16px', outline: 'none'
+                            fontSize: '16px', 
+                            outline: 'none'
                         }}
                         placeholder="Correo electrónico"
-                        autoComplete="new-email"
-                        autoCorrect="off"
-                        autoCapitalize="none"
-                        spellCheck="false"
+                        autoComplete="off"
                         required
                     />
 
@@ -66,8 +66,8 @@ export default function NightModeForm({ formData, onInputChange, isFormValid, on
                         onChange={onInputChange}
                         style={{
                             width: '100%', padding: '15px',
-                            border: `2px solid #FF6B35`, borderRadius: '10px',
-                            background: 'transparent', color: '#FF6B35',
+                            border: `2px solid #B5B8B7`, borderRadius: '10px',
+                            background: 'transparent', color: '#B5B8B7',
                             backdropFilter: 'blur(5px)',
                             fontSize: '16px', outline: 'none'
                         }}
