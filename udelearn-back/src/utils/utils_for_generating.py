@@ -1,6 +1,7 @@
 import re
 import requests
 import json
+import os
 import google.generativeai as genai
 from sentence_transformers import SentenceTransformer, util
 from sentence_transformers import SentenceTransformer, util
@@ -58,7 +59,8 @@ def init_db():
 
 print("Cargando modelos...")
 try:
-    API_KEY = "AIzaSyD0JuHylU7ed6j-x2neQn2H0_OdyhKRVsg" 
+    google_key = os.environ.get('GOOGLE_GENAI_API_KEY', 'default_value')
+    API_KEY = google_key
     if not API_KEY:
         print("GEMINI_API_KEY no cargada")
     
