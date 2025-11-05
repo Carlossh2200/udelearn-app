@@ -57,7 +57,7 @@ def session_scope():
         session.close()
 
 # Initialize database tables (run this once)
-def init_db():
+# def init_db():
     """
     Create all tables defined in your models.
     Call this once when setting up your database.

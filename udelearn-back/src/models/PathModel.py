@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, JSON, select, delete, update
 from sqlalchemy.dialects.postgresql import UUID,JSONB
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
-from ..database.db import get_session, Base
+from database.db import get_session, Base
 from .entities.Path import Path
 import uuid
 
